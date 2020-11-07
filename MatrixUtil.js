@@ -13,7 +13,7 @@ function insertMatrixFromUser() {
     for(let rowIndex = 0; rowIndex < rows; rowIndex++) {
         const row = [];
         for(let colIndex = 0; colIndex < cols; colIndex++) {
-            row.push(reader.question(`Please insert value for [${rowIndex}][${colIndex}] = `));
+            row.push(reader.questionInt(`Please insert value for [${rowIndex}][${colIndex}] = `));
         }
         matrix.push(row);
     }
@@ -34,22 +34,22 @@ function matrixProduct(mat1=[], mat2=[]) {
         }
         productStr+= "\n"
     }
-    return productStr     
+    console.log(productStr)     
 }
 
 
 //function for 2nd problem
 function sumOfMatrices(mat1=[], mat2=[]) {
     let sum=0
-    let productStr=""
+    let sumStr=""
     for ( let i=0; i < mat1.length; i++){
         for (let j=0; j < mat1[0].length; j++){
             sum= mat1[i][j] + mat2[i][j]
-            productStr+=sum+ " "
+            sumStr+=sum+ " "
         }
-        productStr+= "\n"  
+        sumStr+= "\n"  
     }
-    return productStr     
+    console.log(sumStr)     
 }
 
 
@@ -64,10 +64,10 @@ function sumOfEachRow(mat=[]) {
         }
         result.push(sum)
     }
-return result
+console.log(result);
 }
 
-
+//console.log(sumOfEachRow(insertMatrixFromUser()))
 
 
 
